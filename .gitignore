@@ -232,3 +232,6 @@ fabric.properties
 
 # xml files
 .xml
+
+# .idea folder
+.idea
