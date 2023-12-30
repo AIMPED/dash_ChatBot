@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+}
+
+.message {
+    overflow-wrap:normal;
+    margin-top:5px;
+    margin-bottom:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.bot {
+    background-color:gray;
+}
+
+.usr {
+    background-color:lightblue;
+}
+
+.outer {
+    position:relative;
+    height:80vh;
+    /*width:100hw;*/
+    overflow:auto;
+    display:flex;
+    flex-direction:column-reverse;
+}
