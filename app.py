@@ -1,36 +1,61 @@
 import dash
 from dash import dcc, html, Input, Output, State
 
-
 app = dash.Dash(
     __name__,
     external_stylesheets=[
         "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css",
-        ]
+    ]
 )
 
 app.layout = html.Div(
     [
         html.Div(
-            html.Div(
-                id='chat-output',
-                children=[]
-            ),
-            className='outer'
-            # ^^ this is for showing the latest answer on the bottom
+            className='row',
+            style={'height': '90vh'},
+            children=[
+                html.Div(
+                    className='col-3',
+                    children='placeholder',
+                    style={
+                        'background-color': 'gray'
+                    }
+                ),
+                html.Div(
+                    className='col-9',
+                    children=[
+                        html.Div(
+                            html.Div(
+                                id='chat-output',
+                                children=[]
+                            ),
+                            className='outer'
+                            # ^^ this is for showing the latest answer on the bottom
+                        ),
+                    ]
+                )
+            ]
         ),
         html.Div(
-            dcc.Input(
-                id='user-input',
-                type='text',
-                placeholder='Type your message...'
-            ),
+            className='row',
             style={
-                "position": "absolute",
-                "bottom": "0",
-                "height": "20vh"
-            }
-        ),
+                'height': '10vh',
+                'background-color': 'darkgray'
+            },
+            children=html.Div(
+                className='col-9 offset-md-3',
+                children=dcc.Input(
+                    id='user-input',
+                    type='text',
+                    placeholder='Type your message...'
+                ),
+                # style={
+                #     "position": "absolute",
+                #     "bottom": "0",
+                #     "height": "20vh"
+                # }
+            )
+        )
     ]
 )
 

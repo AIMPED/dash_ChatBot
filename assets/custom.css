@@ -19,9 +19,9 @@
 }
 
 .outer {
-    position:relative;
+    /*position:relative;
     height:80vh;
-    /*width:100hw;*/
+    width:100hw;*/
     overflow:auto;
     display:flex;
     flex-direction:column-reverse;
